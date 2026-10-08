@@ -891,11 +891,18 @@ local build_guest_configs = buildpackagejob {
             'projects/guest-package-builder/global/images/rhel-10-((.:build-id))',
           ], x86Tests, test_projects=defaultTestProjects),
           cloudimageteststask(tl.package, 'ubuntu-amd64', [
-            'projects/guest-package-builder/global/images/ubuntu-pro-1804-((.:build-id))',
-            'projects/guest-package-builder/global/images/ubuntu-pro-2004-((.:build-id))',
-            'projects/guest-package-builder/global/images/ubuntu-2204-((.:build-id))',
-            'projects/guest-package-builder/global/images/ubuntu-2404-((.:build-id))',
-            'projects/guest-package-builder/global/images/ubuntu-2604-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-pro-1804-lts-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-pro-2004-lts-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-2204-lts-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-2404-lts-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-2604-lts-((.:build-id))',
+          ], x86Tests, test_projects=defaultTestProjects),
+          cloudimageteststask(tl.package, 'ubuntu-arm64', [
+            'projects/guest-package-builder/global/images/ubuntu-pro-1804-lts-arm64-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-pro-2004-lts-arm64-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-2204-lts-arm64-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-2404-lts-arm64-((.:build-id))',
+            'projects/guest-package-builder/global/images/ubuntu-2604-lts-arm64-((.:build-id))',
           ], x86Tests, test_projects=defaultTestProjects),
           cloudimageteststask(tl.package, 'debian-arm64', [
             'projects/guest-package-builder/global/images/debian-12-arm64-((.:build-id))',
